@@ -2,9 +2,20 @@
 use Joomla\CMS\Uri\Uri;
 use \Joomla\CMS\Router\Route;
 $estacion = $_GET['est'];
+$db = JFactory::getDbo();
+$query = $db
+    ->getQuery(true)
+    ->select('nombre')
+    ->from($db->quoteName('#__estaciones'))
+    ->where($db->quoteName('ind_climatologico') . " = " . $db->quote($estacion));
+
+$db->setQuery($query);
+$result = $db->loadResult();
+
 $wa = $this->document->getWebAssetManager();
 $wa->useStyle('com_mantenimiento.list');
 $path = "images/fotos_estaciones/$estacion/";
+
 if(!is_dir($path)){
     echo "<h5>Todavía no hemos creado la carpeta \"$path\" </h5>";
 }else{
@@ -13,13 +24,13 @@ if(!is_dir($path)){
     foreach ($array_tipo as $tip) :
         $files=array_merge($files,JFolder::files($path,"^.*\.$tip$"));
     endforeach;
-
 ?>
+
 <a class="btn btn-primary" href="<?php echo Route::_('index.php?option=com_mantenimiento&view=estaciones'); ?>" role="button">Volver a estaciones</a>
 
 <section id="galeria">
 <div class="text-center">
-    <h1>Galería <?= $estacion ?></h1>
+    <h1>Galería de <?= $result ?></h1>
 </div>
 
 <div class="row">
