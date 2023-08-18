@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<form>
+    <fieldset name="nuevaest">
+        <field
+            name="id"
+            type="hidden"
+            readonly="true"
+            class="readonly"
+            default="0"
+            description="JGLOBAL_FIELD_ID_DESC"
+        />
+        <field name="nombre" label="Nombre" type="text" required="true" />
+        <field name="ind_sinoptico" label="Indicativo synóptico" type="text" required="false" />
+        <field name="ind_climatologico" label="Indicativo climatológico" type="text" required="true" />
+        <field name="tipo_estacion" type="list" default="" required="true" label="Tipo" description="">
+            <option value="">Escoja tipo de estación</option>
+            <option value="THIES">THIES</option>
+            <option value="VAISALA">VAISALA</option>
+            <option value="ESOS">ESOS</option>
+            <option value="SIMAS">SIMAS</option>
+            <option value="SEAC">SEAC</option>
+            <option value="RSD">RADAR</option>
+        </field>
+        <field name="variables" type="list" default="" required="true" label="Variables (T: temperatura; H: hunedad; V: viento; LL: precipitación; P: presión; R: radiación; I: insolación)" description="">
+            <option value="">Escoja sensores de la estación</option>
+            <option value="T H LL">T H LL</option>
+            <option value="T H V LL">T H V LL</option>
+            <option value="T H V LL P">T H V LL P</option>
+            <option value="T H V LL P R">T H V LL P R</option>
+            <option value="T H V LL P R I">T H V LL P R I</option>
+            <option value="RADAR">RADAR</option>
+        </field>
+        <field name="tipo_mant" type="list" default="" required="true" label="Tipo" description="">
+            <option value="">Escoja tiempo mantenimiento preventivo</option>
+            <option value="1">Mensual</option>
+            <option value="2">Trimestral</option>
+            <option value="3">Semestral</option>
+        </field>
+        <field name="provincia" label="Provincia" type="text" required="true" />
+        <field name="latitud" label="Latitud" type="text" required="true" />
+        <field name="longitud" label="Longitud" type="text" required="true" />
+        <field name="altitud" label="Altitud" type="text" required="false" />
+        <field name="geografica" label="Sistema de referencia geográfica" default='ETRS-89' type="text" required="false" />
+    </fieldset>
+</form>

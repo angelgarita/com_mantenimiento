@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Aemet\Component\Mantenimiento\Site\Field">
+  <fieldset>
+        <field
+            name="id"
+            type="hidden"
+            readonly="true"
+            class="readonly"
+            default="0"
+            description="JGLOBAL_FIELD_ID_DESC"
+        />
+        <field name="nombre" label="Nombre" type="text" required="true" />
+        <field name="ind_sinoptico" label="Indicativo synóptico" type="text" required="false" />
+        <field name="ind_climatologico" label="Indicativo climatológico" type="text" required="true" />
+        <field name="tipo_estacion" type="list" default="" required="true" label="Tipo" description="">
+            <option value="">Escoja tipo de estación</option>
+            <option value="THIES">THIES</option>
+            <option value="VAISALA">VAISALA</option>
+            <option value="ESOS">ESOS</option>
+            <option value="SIMAS">SIMAS</option>
+            <option value="SEACV2">SEACV2</option>
+            <option value="RSD">RADAR</option>
+            <option value="SONDEO">SONDEO</option>
+        </field>
+        <field name="variables" type="checkboxes" label="Variables" description="" hint="">
+            <option value="T">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_T</option>
+            <option value="LL">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_LL</option>
+            <option value="H">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_H</option>
+            <option value="V">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_V</option>
+            <option value="P">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_P</option>
+            <option value="R">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_R</option>
+            <option value="I">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_I</option>
+            <option value="RADAR">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_RADAR</option>
+            <option value="SONDEO">COM_MANTENIMIENTO_MANTENIMIENTOS_VARIABLES_OPTION_SONDEO</option>
+        </field>
+
+        <field name="tipo_mant" type="list" default="" required="true" label="Tipo" description="">
+            <option value="">Escoja tiempo mantenimiento preventivo</option>
+            <option value="1">Mensual</option>
+            <option value="2">Trimestral</option>
+            <option value="3">Semestral</option>
+        </field>
+        <field name="comentarios" label="Comentarios" type="textarea" cols="5" required="false" />
+        <!--<field name="foto" directory="images" type="media" label="Subir foto" description="Subir foto estación" preview="false" />-->
+        <field name="ficherote" type="file" label="Subir fotos" multiple="true"  hint="COM_SUBIR_FORM_LBL_FOTO_FICHEROTE"/>
+        <field name="provincia" label="Provincia" type="text" required="true" />
+        <field name="latitud" label="Latitud" type="text" required="true" />
+        <field name="longitud" label="Longitud" type="text" required="true" />
+        <field name="altitud" label="Altitud" type="text" required="false" />
+        <field name="geografica" label="Sistema de referencia geográfica" default='ETRS-89' type="text" required="false" />
+
+  </fieldset>
+</form>

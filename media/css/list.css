@@ -1,0 +1,38 @@
+/**
+ * @version    CVS: 1.0.0
+ * @package    Com_Mantenimiento
+ * @author     Angel Garitagotia <agaritagotiac@aemet.es>
+ * @copyright  2022 Angel Garitagotia
+ * @license    Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt
+ */
+ #estacionList a {
+    color: var(--template-link-color);
+    text-decoration: none;
+
+ }
+ #estacionList th {
+    font-weight: bold;
+ }
+
+#mantenimientoList a {
+    color: var(--template-link-color);
+    text-decoration: none;
+ }
+
+ #mantenimientoList th {
+    font-weight: bold;
+ }
+
+#galeria .col-lg-4 {
+    margin:0 !important;
+    padding:20px;
+}
+
+#galeria img {
+    width:100%;
+    height:300px;
+}
+
+#galeri img:hover {
+    border:5px solid #f7f7f7;
+}

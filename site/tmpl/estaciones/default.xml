@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Listado de estaciones" option="View">
+        <message>
+                        <![CDATA[Lista de estaciones]]>
+        </message>
+	</layout>
+
+</metadata>

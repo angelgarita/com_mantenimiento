@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<form>
+    <fieldset name="mantenimiento">
+
+        <field
+            name="id"
+            type="hidden"
+            readonly="true"
+            class="readonly"
+            default="0"
+            description="JGLOBAL_FIELD_ID_DESC"
+        />
+        <field
+            name="ind_estacion"
+            type="sql"
+            label="Estación"
+            query="SELECT ind_climatologico, nombre FROM #__estaciones ORDER BY nombre ASC"
+            key_field="ind_climatologico"
+            value_field="nombre"
+        />
+        <field
+            name="fecha"
+            type="calendar"
+            default=""
+            label="Fecha"
+            description="Fecha del mantenimiento"
+            required="true"
+            filter="user_utc"
+	        showtime="false"
+            todaybutton="false"
+            filltable="false"
+            translateformat="true"
+        />
+        <field name="tecnicos" label="Realizado por" type="text" required="true" />
+        <field name="actuacion" label="Actuacion" type="text" required="true" />
+        <field name="comentarios" label="Comentarios" type="text" required="false" />
+        <field name="estado" type="list" default="" required="true" label="Tipo">
+            <option value="">Estado en el que queda la estación</option>
+            <option value="V">Correcto</option>
+            <option value="A">Funcionando con fallos</option>
+            <option value="R">Sin funcionar</option>
+        </field>
+        <field name="ultimo" type="hidden" default="1" />
+    </fieldset>
+</form>
