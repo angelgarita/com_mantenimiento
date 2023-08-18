@@ -113,6 +113,12 @@ if (!$canEdit && Factory::getApplication()->getIdentity()->authorise('core.edit.
 			<th><?php echo Text::_('COM_MANTENIMIENTO_FORM_LBL_ESTACION_GEOGRAFICA'); ?></th>
 			<td><?php echo $this->item->geografica; ?></td>
 		</tr>
+
+        <tr>
+			<th><?php echo Text::_('Observaciones'); ?></th>
+			<td><?php echo $this->item->comentarios; ?></td>
+		</tr>
+
         <tr>
 			<th><?php echo Text::_('Fotos estación'); ?></th>
 			<td><a href="<?php echo Route::_('index.php?option=com_mantenimiento&view=fotos&est=' . $this->item->ind_climatologico, false, 2); ?>" class="btn btn-mini" type="button"><i class="fas fa-camera" ></i></a></td>
