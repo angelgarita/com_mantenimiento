@@ -88,10 +88,10 @@ class Com_mantenimientoInstallerScript extends InstallerScript
         $this->deleteFolders[] = '/components/com_mantenimiento/src/View/Nuevomantenimiento';
         $this->deleteFolders[] = '/components/com_mantenimiento/src/View/Listamantenimientos';
 
-        $this->deleteFolders[] = '/administrator/com_mantenimiento/src/View/Foto';
-        $this->deleteFolders[] = '/administrator/com_mantenimiento/src/View/Fotos';
-        $this->deleteFolders[] = '/administrator/com_mantenimiento/tmpl/foto';
-        $this->deleteFolders[] = '/administrator/com_mantenimiento/tmpl/fotos';
+        $this->deleteFolders[] = '/administrator/components/com_mantenimiento/src/View/Foto';
+        $this->deleteFolders[] = '/administrator/components/com_mantenimiento/src/View/Fotos';
+        $this->deleteFolders[] = '/administrator/components/com_mantenimiento/tmpl/foto';
+        $this->deleteFolders[] = '/administrator/components/com_mantenimiento/tmpl/fotos';
 
 
 
