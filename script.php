@@ -97,6 +97,8 @@ class Com_mantenimientoInstallerScript extends InstallerScript
 
         $this->deleteFiles[] = '/components/com_mantenimiento/tmpl/estaciones/edit.php';
         $this->deleteFiles[] = '/components/com_mantenimiento/tmpl/estaciones/edit.xml';
+		$this->deleteFiles[] = '/components/com_mantenimiento/tmpl/mantenimientoform/default.xml';
+		$this->deleteFiles[] = '/components/com_mantenimiento/tmpl/estacionform/default.xml';
 
         $this->deleteFiles[] = '/components/com_mantenimiento/src/Model/ListamantenimientosModel.php';
         $this->deleteFiles[] = '/components/com_mantenimiento/src/Model/NuevaestacionModel.php';
