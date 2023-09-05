@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<metadata>
-    <layout title="Formulario estación " option="View">
-        <message>
-                        <![CDATA[Formulario para añadir nueva estación]]>
-        </message>
-    </layout>
-    
-</metadata>
