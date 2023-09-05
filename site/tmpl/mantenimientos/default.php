@@ -7,7 +7,6 @@
  * @license    Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt
  */
 
-
 use \Joomla\CMS\HTML\HTMLHelper;
 use \Joomla\CMS\Factory;
 use \Joomla\CMS\Uri\Uri;
@@ -123,7 +122,7 @@ if($cuantos > 0){
                 <?php if( $primer != $segundo  && $cuantos >1):?>
                     <td>
 						<?php //echo $item->nombre;  ?>
-                        <a href="<?php echo Route::_('index.php?option=com_mantenimiento&view=mantenimientos&est=' . $item->ind_estacion, false, 2); ?>" class="btn btn-mini" type="button"><?php echo $item->nombre; ?></a>
+                        <a href="<?php echo Route::_('index.php?option=com_mantenimiento&view=mantenimientos&est=' . $item->ind_estacion, false, 2); ?>" class="btn btn-mini" type="button" title="Ver todo los mantenimientos"><?php echo $item->nombre; ?></a>
 					</td>
 					<td>
 						<?php echo $item->ind_estacion; ?>
