@@ -112,6 +112,7 @@ class Com_mantenimientoInstallerScript extends InstallerScript
         $this->deleteFiles[] = '/administrator/components/com_mantenimiento/src/Controller/FotoController.php';
         $this->deleteFiles[] = '/administrator/components/com_mantenimiento/src/Controller/FotosController.php';
         $this->deleteFiles[] = '/administrator/components/com_mantenimiento/src/Model/FotoModel.php';
+        $this->deleteFiles[] = '/administrator/components/com_mantenimiento/src/Model/FotosModel.php';
         $this->deleteFiles[] = '/administrator/components/com_mantenimiento/src/Table/FotoTable.php';
 
 
